@@ -1,31 +1,32 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using System.Configuration;
 using System.Web.Mvc;
+using PusherRESTDotNet;
 
 namespace Geekbeing.Pusher.LiveChat.Web.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        private static readonly PusherProvider Provider = new PusherProvider
+         (
+             ConfigurationManager.AppSettings["pusher_app_id"],
+             ConfigurationManager.AppSettings["pusher_key"],
+             ConfigurationManager.AppSettings["pusher_secret"]
+         );
+
+        public ActionResult Index(string chatMessage, string username)
         {
-            ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
-
-            return View();
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your quintessential app description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your quintessential contact page.";
-
+            var now = DateTime.UtcNow;
+            var request = new ObjectPusherRequest(
+                "chat_channel",
+                "message_received",
+                new
+                {
+                    message = chatMessage,
+                    user = username,
+                    timestamp = now.ToShortDateString() + " " + now.ToShortTimeString()
+                });
+            Provider.Trigger(request);
             return View();
         }
     }

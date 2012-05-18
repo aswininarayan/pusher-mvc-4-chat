@@ -635,3 +635,7 @@ ul#social li {
             width: auto;
         }
 }
+
+#messages {
+	list-style-type: none;
+}

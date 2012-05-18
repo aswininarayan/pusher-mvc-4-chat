@@ -41,3 +41,7 @@ C:\workspace\Geekbeing.Pusher.LiveChat\Geekbeing.Pusher.LiveChat.Web\obj\Debug\G
 C:\workspace\Geekbeing.Pusher.LiveChat\Geekbeing.Pusher.LiveChat.Web\obj\Debug\Geekbeing.Pusher.LiveChat.Web.dll
 C:\workspace\Geekbeing.Pusher.LiveChat\Geekbeing.Pusher.LiveChat.Web\obj\Debug\Geekbeing.Pusher.LiveChat.Web.pdb
 C:\workspace\Geekbeing.Pusher.LiveChat\Geekbeing.Pusher.LiveChat.Web\bin\System.Web.Http.Data.Helpers2.dll
+C:\workspace\Geekbeing.Pusher.LiveChat\Geekbeing.Pusher.LiveChat.Web\bin\Newtonsoft.Json.dll
+C:\workspace\Geekbeing.Pusher.LiveChat\Geekbeing.Pusher.LiveChat.Web\bin\PusherRESTDotNet.dll
+C:\workspace\Geekbeing.Pusher.LiveChat\Geekbeing.Pusher.LiveChat.Web\bin\Newtonsoft.Json.pdb
+C:\workspace\Geekbeing.Pusher.LiveChat\Geekbeing.Pusher.LiveChat.Web\bin\Newtonsoft.Json.xml
